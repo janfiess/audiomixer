@@ -14,14 +14,14 @@ public class PlayMusic : MonoBehaviour
     int playbackProgress = 0;
     //int toggle_playpause = 0;
     public List<AudioClip> tracksForLayer;
-    AudioSource audioSource;
+    AudioSource myAudioSource;
     int buttonClickNum;
     
 
     void Awake() {
-        audioSource = GetComponent<AudioSource>();
-        audioSource.clip = tracksForLayer[0];
-        audioSource.Play();
+        myAudioSource = GetComponent<AudioSource>();
+        myAudioSource.clip = tracksForLayer[0];
+        myAudioSource.Play();
     }
 
     // Button Interaction -> to be removed when there are no buttons any more.
@@ -71,30 +71,30 @@ public class PlayMusic : MonoBehaviour
     }
 
     public void SwapClip1(){
-        playbackProgress = audioSource.timeSamples;
-        audioSource.clip = tracksForLayer[0];
-        audioSource.timeSamples = playbackProgress;
-        audioSource.Play();
+        //playbackProgress = myAudioSource.timeSamples;
+        myAudioSource.clip = tracksForLayer[0];
+        //myAudioSource.timeSamples = playbackProgress;
+        myAudioSource.Play();
     }
 
      public void SwapClip2(){
-        playbackProgress = audioSource.timeSamples;
-        audioSource.clip = tracksForLayer[1];
-        audioSource.timeSamples = playbackProgress;
-        audioSource.Play();
+        //playbackProgress = myAudioSource.timeSamples;
+        myAudioSource.clip = tracksForLayer[1];
+        //myAudioSource.timeSamples = playbackProgress;
+        myAudioSource.Play();
     }
 
     public void SwapClip3(){
-        playbackProgress = audioSource.timeSamples;
-        audioSource.clip = tracksForLayer[2];
-        audioSource.timeSamples = playbackProgress;
-        audioSource.Play();
+        //playbackProgress = myAudioSource.timeSamples;
+        myAudioSource.clip = tracksForLayer[2];
+        //myAudioSource.timeSamples = playbackProgress;
+        myAudioSource.Play();
     }
 
     public void SwapClip4(){
-        playbackProgress = audioSource.timeSamples;
-        audioSource.clip = tracksForLayer[3];
-        audioSource.timeSamples = playbackProgress;
-        audioSource.Play();
+        //playbackProgress = myAudioSource.timeSamples;
+        myAudioSource.clip = tracksForLayer[3];
+        //myAudioSource.timeSamples = playbackProgress;
+        myAudioSource.Play();
     }
 }
